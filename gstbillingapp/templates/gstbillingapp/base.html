@@ -1,0 +1,69 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>
+		{% block title %}
+		GST Billing
+		{% endblock %}
+	</title>
+
+	{% block metatags %}
+	{% endblock %}
+
+	<link rel="stylesheet" href="{% static "gstbillingapp/bootstrap-4.4.1-dist/css/bootstrap-cosmo.min.css" %}">
+	<link rel="stylesheet" href="{% static "gstbillingapp/main.css" %}">
+
+	<link rel="stylesheet" href="{% static "gstbillingapp/DataTables/jquery.dataTables.min.css" %}">
+	<link rel="stylesheet" href="{% static "gstbillingapp/DataTables/dataTables.bootstrap4.min.css" %}">
+
+	{% block includecss %}
+	{% endblock %}
+
+</head>
+
+<body>
+
+		{% include "gstbillingapp/navbar.html" %}
+		<div class="container">
+		{% if error_message %}
+		<div class="alert alert-danger" role="alert">
+			{{error_message}}
+		</div>
+		{% endif %}
+
+		{% if success_message %}
+		<div class="alert alert-success" role="alert">
+			{{success_message}}
+		</div>
+		{% endif %}
+
+		{% block content %}
+		CONTENT BLOCK
+		{% endblock %}
+
+	</div>
+
+	<script src="{% static "gstbillingapp/js/jquery-3.4.1.min.js" %}"></script>
+	<script src="{% static "gstbillingapp/js/popper.min.js" %}"></script>
+
+	<script src="{% static "gstbillingapp/bootstrap-4.4.1-dist/js/bootstrap.min.js" %}"></script>
+	<script src="{% static "gstbillingapp/DataTables/jquery.dataTables.min.js" %}"></script>
+
+	{% block includejs %}
+	{% endblock %}
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-159304253-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-159304253-1');
+</script>
+
+</body>
+</html>

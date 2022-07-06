@@ -1,0 +1,44 @@
+{% extends "gstbillingapp/base.html" %} {% load static %} {% block content %}
+<div class="row">
+  <div class="col-sm"></div>
+  <div class="col-sm">
+    <div class="card" id="login-card">
+      <h5 class="card-header">Login</h5>
+      <form method="POST">
+        {% csrf_token %}
+        <table class="table">
+          <tbody class="two-col-form">
+            <tr>
+              <th scope="row" class="text-right">Username:</th>
+              <td class="form-input-td">{{auth_form.username}}</td>
+            </tr>
+            <tr>
+              <th scope="row" class="text-right">Password:</th>
+              <td class="form-input-td">{{auth_form.password}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <input
+          type="submit"
+          class="btn btn-primary"
+          value="Submit"
+          style="margin-bottom: 10px; border-radius: 8px"
+        />
+      </form>
+    </div>
+    <a href="{% url 'signup_view' %}"
+      ><input
+        class="btn btn-danger"
+        value="Sign Up"
+        style="
+          width: 100px;
+          border-radius: 8px;
+          margin-left: 125px;
+          margin-top: 10px;
+        "
+    /></a>
+  </div>
+  <div class="col-sm"></div>
+</div>
+{% endblock %}

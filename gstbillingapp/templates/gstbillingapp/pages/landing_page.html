@@ -1,0 +1,31 @@
+{% extends "gstbillingapp/base.html" %}
+
+
+{% load static %}
+<!doctype html>
+
+{% block title %}
+GST Bills
+{% endblock %}
+
+{% block content %}
+
+<div >
+	<h1 class="display-3" style="text-align: center;">GST Bills</h1>
+	
+	<hr class="my-4">
+	
+	<p class="lead">
+		<a class="btn btn-primary btn-lg" href="{% url 'invoice_create' %}" role="button" style="margin-left: 43%;">Create Invoice</a>
+	</p>
+</div>
+
+
+
+
+</div>
+
+{% endblock %}
+
+
+
