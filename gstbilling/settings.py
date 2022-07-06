@@ -129,7 +129,7 @@ STATICFILES_DIRS = [
     'gstbillingapp/static'
     ]
 STATIC_ROOT = 'assets'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 LOGIN_URL = "/login"
 SOCIAL_AUTH_LOGIN_REDIRECT_URL = "/invoices/new"
