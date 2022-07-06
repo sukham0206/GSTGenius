@@ -14,9 +14,12 @@
 	{% block metatags %}
 	{% endblock %}
 
+	<link rel="stylesheet" href="{% static "gstbillingapp/bootstrap-4.4.1-dist/css/bootstrap-cosmo.min.css" %}">
 	<link rel="stylesheet" href="{% static "gstbillingapp/main.css" %}">
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
-	
+
+	<link rel="stylesheet" href="{% static "gstbillingapp/DataTables/jquery.dataTables.min.css" %}">
+	<link rel="stylesheet" href="{% static "gstbillingapp/DataTables/dataTables.bootstrap4.min.css" %}">
+
 	{% block includecss %}
 	{% endblock %}
 
@@ -44,7 +47,12 @@
 
 	</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="{% static "gstbillingapp/js/jquery-3.4.1.min.js" %}"></script>
+	<script src="{% static "gstbillingapp/js/popper.min.js" %}"></script>
+
+	<script src="{% static "gstbillingapp/bootstrap-4.4.1-dist/js/bootstrap.min.js" %}"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+
 	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
 
 
