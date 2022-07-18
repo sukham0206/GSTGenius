@@ -81,10 +81,23 @@ WSGI_APPLICATION = 'gstbilling.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
+
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'gstbillingdb.sqlite3'),
+
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+        'NAME': config("name"),
+
+        'USER': config("user"),
+
+        'PASSWORD': config("password"),
+
+        'HOST': config("host"),
+
+        'PORT': config("port"),
+
     }
+
 }
 # SOCIAL_AUTH_POSTGRES_JSONFIELD = True
 
