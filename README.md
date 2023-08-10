@@ -31,7 +31,7 @@ Follow these steps to use GSTGenius:
 1. **Installation**: Clone the GSTGenius repository and install the required dependencies using `pip`:
 
     ```
-    git clone https://github.com/your-username/GSTGenius.git
+    git clone https://github.com/sukham0206/GSTGenius.git
     cd GSTGenius
     pip install -r requirements.txt
     ```
